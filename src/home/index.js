@@ -2,6 +2,8 @@ import './styles.css';
 
 export default function Home() {
     return (
-        <div>Teste</div>
+        <div className='body_home'>
+            <div className='celular'>Teste</div>
+        </div>
     )
 }
