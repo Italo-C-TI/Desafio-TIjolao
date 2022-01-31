@@ -21,7 +21,7 @@ function App() {
   const handleEnviaCodigo = async () => {
     try {
       const response = await fetch(
-        "https://back-modulo-5-teste.herokuapp.com/cobrancas",
+        "https://",
         {
           method: "POST",
           headers: {
