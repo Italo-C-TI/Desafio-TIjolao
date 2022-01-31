@@ -57,8 +57,10 @@ export default function Home() {
     return (
         <div className='body_home'>
             <div className='celular'>
-                <input className='visor' type="text" value="Foodlovers"></input>
-                <div className='button-enter'>ENTER</div>
+                <input className='visor' type="text" value=""></input>
+                <div className='button-enter' onClick={async () => {
+          handleEnviaCodigo()
+          }}>ENTER</div>
                 <div className='buttons'>
                     <div className='button1'></div>
                     <div className='button2' onClick={() => {handleAdicionaAoCodigo("2")}}></div>
