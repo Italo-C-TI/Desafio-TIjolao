@@ -25,3 +25,94 @@
     background-color: transparent;
     text-align: center;
 }
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 230px;
+    height: 100px;
+    margin-top: 115px;
+    margin-left: 35px;
+}
+
+.button1 {
+    width: 40px;
+    height: 40px;
+    margin-right: 40px;
+    margin-bottom: 15px;
+}
+
+.button2 {
+    width: 40px;
+    height: 40px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.button3 {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.button4 {
+    width: 40px;
+    height: 40px;
+    margin-right: 40px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.button5 {
+    width: 40px;
+    height: 40px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.button6 {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.button7 {
+    width: 40px;
+    height: 40px;
+    margin-right: 40px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.button8 {
+    width: 40px;
+    height: 40px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.button9 {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.buttonAst {
+    width: 40px;
+    height: 40px;
+    margin-right: 40px;
+}
+
+.button0 {
+    width: 40px;
+    height: 40px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.buttonReg {
+    width: 40px;
+    height: 40px;
+}
