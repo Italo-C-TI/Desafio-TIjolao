@@ -11,11 +11,19 @@ function App() {
   const [maiusculo,setMaiusculo] = useState(false);
 
   const handleAdicionaAoCodigo =(numeroRecebido)=>{
-    if(numeroRecebido == '1'){
+    if(numeroRecebido === '1'){
       return;
     }
-    setUltimoNumeroRecebido(numeroRecebido)
-    setCodigo(codigo.trim() + numeroRecebido.trim());
+    if(ultimoNumeroRecebido && ultimoNumeroRecebido !== numeroRecebido){
+      alert("é necessario enviar antes de adicionar uma nova letra");
+      return;
+    }
+    if(!ultimoNumeroRecebido){
+      setCodigo(codigo.trim() + numeroRecebido.trim());
+    }if(ultimoNumeroRecebido && numeroRecebido === ultimoNumeroRecebido){
+        setCodigo(codigo.trim() + numeroRecebido.trim());
+    }
+    setUltimoNumeroRecebido(numeroRecebido);
 
   }
   const handleEnviaCodigo = async () => {
@@ -33,7 +41,7 @@ function App() {
           }),
         }
       );
-
+      setUltimoNumeroRecebido();
 
     } catch (error) {
 
