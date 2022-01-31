@@ -26,6 +26,14 @@
     text-align: center;
 }
 
+.button-enter {
+    margin-top: 40px;
+    margin-left: 25px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
 .buttons {
     display: flex;
     align-items: center;
@@ -33,7 +41,7 @@
     flex-wrap: wrap;
     width: 230px;
     height: 100px;
-    margin-top: 115px;
+    margin-top: 60px;
     margin-left: 35px;
 }
 

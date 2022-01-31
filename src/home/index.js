@@ -5,6 +5,7 @@ export default function Home() {
         <div className='body_home'>
             <div className='celular'>
                 <input className='visor' type="text" value="Foodlovers"></input>
+                <div className='button-enter'>ENTER</div>
                 <div className='buttons'>
                     <div className='button1'></div>
                     <div className='button2'></div>
