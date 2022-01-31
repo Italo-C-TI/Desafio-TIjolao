@@ -15,7 +15,7 @@ function App() {
       return;
     }
     if(ultimoNumeroRecebido && ultimoNumeroRecebido !== numeroRecebido){
-      alert("é necessario enviar antes de adicionar uma nova letra");
+      console.log("é necessario enviar antes de adicionar uma nova letra");
       return;
     }
     if(!ultimoNumeroRecebido){
@@ -24,16 +24,18 @@ function App() {
         setCodigo(codigo.trim() + numeroRecebido.trim());
     }
     setUltimoNumeroRecebido(numeroRecebido);
+    console.log(codigo);
 
   }
   const handleEnviaCodigo = async () => {
     try {
       const response = await fetch(
-        "https://localhost:8000",
+        "http://localhost:8000",
         {
           method: "POST",
+          mode: 'no-cors',
           headers: {
-            "content-type": "application/json",
+            "content-type": "application/json"
           },
           body: JSON.stringify({
             codigo: codigo,
@@ -41,22 +43,33 @@ function App() {
           }),
         }
       );
-      setUltimoNumeroRecebido();
+
+      const data = await response.json();
+      console.log(data);
+      setUltimoNumeroRecebido('');
+      setCodigo('');
 
     } catch (error) {
-      console.log(error.message);
+      console.log(error);
+      setUltimoNumeroRecebido('');
+      setCodigo('');
     }
   };
   return (
     <div className="App">
-        <h2 onClick={() => {
+        <h2 onClick={async () => {
           handleEnviaCodigo()
-          }}>TESTE</h2>
-
-        <p onClick={handleAdicionaAoCodigo(2)}>2</p>
-        <p onClick={handleAdicionaAoCodigo(3)}>3</p>
-        <p onClick={handleAdicionaAoCodigo(4)}>4</p>
-        <p onClick={handleAdicionaAoCodigo(5)}>5</p>  
+          }}>enviar</h2>
+        
+        <p onClick={() => {handleAdicionaAoCodigo("2")}}>2</p>
+        <p onClick={() => {handleAdicionaAoCodigo("3")}}>3</p>
+        <p onClick={() => {handleAdicionaAoCodigo("4")}}>4</p>
+        <p onClick={() => {handleAdicionaAoCodigo("5")}}>5</p>
+        <p onClick={() => {handleAdicionaAoCodigo("6")}}>6</p>
+        <p onClick={() => {handleAdicionaAoCodigo("7")}}>7</p>
+        <p onClick={() => {handleAdicionaAoCodigo("8")}}>8</p>
+        <p onClick={() => {handleAdicionaAoCodigo("9")}}>9</p>
+        <p onClick={() => {handleAdicionaAoCodigo("0")}}>0</p>
     </div>
   );
 }
