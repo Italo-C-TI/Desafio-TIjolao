@@ -18,7 +18,7 @@ export default function Home() {
       return;
     }
     if(!ultimoNumeroRecebido){
-      setCodigo(codigo.trim() + numeroRecebido.trim());
+      setCodigo(numeroRecebido.trim());
     }if(ultimoNumeroRecebido && numeroRecebido === ultimoNumeroRecebido){
         setCodigo(codigo.trim() + numeroRecebido.trim());
     }
@@ -61,17 +61,17 @@ export default function Home() {
                 <div className='button-enter'>ENTER</div>
                 <div className='buttons'>
                     <div className='button1'></div>
-                    <div className='button2'></div>
-                    <div className='button3'></div>
-                    <div className='button4'></div>
-                    <div className='button5'></div>
-                    <div className='button6'></div>
-                    <div className='button7'></div>
-                    <div className='button8'></div>
-                    <div className='button9'></div>
+                    <div className='button2' onClick={() => {handleAdicionaAoCodigo("2")}}></div>
+                    <div className='button3' onClick={() => {handleAdicionaAoCodigo("3")}}></div>
+                    <div className='button4' onClick={() => {handleAdicionaAoCodigo("4")}}></div>
+                    <div className='button5' onClick={() => {handleAdicionaAoCodigo("5")}}></div>
+                    <div className='button6' onClick={() => {handleAdicionaAoCodigo("6")}}></div>
+                    <div className='button7' onClick={() => {handleAdicionaAoCodigo("7")}}></div>
+                    <div className='button8' onClick={() => {handleAdicionaAoCodigo("8")}}></div>
+                    <div className='button9' onClick={() => {handleAdicionaAoCodigo("9")}}></div>
                     <div className='buttonAst'></div>
-                    <div className='button0'></div>
-                    <div className='buttonReg'></div>
+                    <div className='button0' onClick={() => {handleAdicionaAoCodigo("0")}}></div>
+                    <div className='buttonReg' onClick={()=>setMaiusculo(!maiusculo)}></div>
                 </div>
             </div>
         </div>
