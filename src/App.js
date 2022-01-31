@@ -29,14 +29,14 @@ function App() {
   const handleEnviaCodigo = async () => {
     try {
       const response = await fetch(
-        "https://",
+        "https://localhost:8000",
         {
           method: "POST",
           headers: {
             "content-type": "application/json",
           },
           body: JSON.stringify({
-            codigo: 1,
+            codigo: codigo,
             shift: maiusculo
           }),
         }
@@ -44,12 +44,19 @@ function App() {
       setUltimoNumeroRecebido();
 
     } catch (error) {
-
+      console.log(error.message);
     }
   };
   return (
     <div className="App">
-        <h2>TESTE</h2>
+        <h2 onClick={() => {
+          handleEnviaCodigo()
+          }}>TESTE</h2>
+
+        <p onClick={handleAdicionaAoCodigo(2)}>2</p>
+        <p onClick={handleAdicionaAoCodigo(3)}>3</p>
+        <p onClick={handleAdicionaAoCodigo(4)}>4</p>
+        <p onClick={handleAdicionaAoCodigo(5)}>5</p>  
     </div>
   );
 }
